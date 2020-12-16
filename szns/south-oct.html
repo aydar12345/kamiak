@@ -1,0 +1,83 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <!-- Assest storage -->
+      <assets>
+        <img id="north-aug" src="/worlds/south-oct.jpg">
+        <img id="aug1" src="/icons/august.png">
+        <img id="sep1" src="/icons/sep.png">
+        <img id="oct1" src="/icons/oct.png">
+        <img id="nov1" src="/icons/nov.png">
+        <img id="arr1" src="/icons/home.png">
+        
+      </assets>
+      <!-- Adding 360 image to the sky -->      
+      <a-sky src="#north-aug" rotation="0 -90 0"></a-sky>
+      <!-- adding august icon -->      
+      <a-image id="aug" src="#aug1" position="-1.8 -1 -3" rotation="-25 0 0" scale="1 1 1"></a-image>
+      <!-- adding september icon -->      
+      <a-image id="sep" src="#sep1" position="-.6 -1 -3" rotation="-25 0 0" scale="1 1 1"></a-image>
+      <!-- adding october icon -->      
+      <a-image id="oct" src="#oct1" position=".6 -1 -3" rotation="-25 0 0" scale="1 1 1"></a-image>
+      <!-- adding november icon -->      
+      <a-image id="nov" src="#nov1" position="1.8 -1 -3" rotation="-25 0 0" scale="1 1 1"></a-image>
+      
+      
+      <!-- adding home icon -->       
+      <a-image id="home" src="#arr1" position="-7 0 0" rotation="0 90 0" scale="1 1 1"></a-image>     
+ 
+      <!-- adding cursor to the middle of camera view  -->      
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    
+
+    </a-scene>
+  </body>
+</html>
+
+<script>
+  /* adding a clicking event to the august icon to send user to different webpage  */
+  document
+    .querySelector("#aug")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/szns/south-aug.html";
+    });
+    /* adding a clicking event to the september icon to send user to different webpage  */  
+    document
+    .querySelector("#sep")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/szns/south-sep.html";
+    });
+    /* adding a clicking event to the october icon to send user to different webpage  */  
+    document
+    .querySelector("#oct")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/szns/south-oct.html";
+    });  
+ 
+    /* adding a clicking event to the november icon to send user to different webpage  */  
+    document
+    .querySelector("#nov")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/szns/south-nov.html";
+    });
+  
+  
+    /* adding a clicking event to the arrow icon to send user to different webpage  */  
+    document
+    .querySelector("#home")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/index.html";
+    });     
+</script>  

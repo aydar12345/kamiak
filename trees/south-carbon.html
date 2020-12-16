@@ -1,0 +1,117 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>    
+
+  </head>
+  <body>
+    <a-scene>
+      <!-- Assest storage -->  
+      <assets>
+        <img id="south-aug" src="/worlds/south-aug.jpg">
+        <img id="1" src="/icons/1.png">
+        <img id="2" src="/icons/2.png">
+        <img id="3" src="/icons/3.png">
+        <img id="4" src="/icons/4.png">         
+        <img id="5" src="/icons/5.png">
+        <img id="arr1" src="/icons/home.png">        
+      </assets>
+      
+      <!-- Adding 360 image to the sky -->      
+      <a-sky src="#south-aug" rotation="0 -90 0"></a-sky>
+      
+      
+      <!-- Adding an image with an event that displays text -->      
+      <a-image src="#1" position="-.2 .6 -5" rotation="0 0 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
+        <a-text id="cylinderText" value="Ponderosa Pine
+                                         Distance to tree: 27.4 ft
+                                         Height: 20 ft
+                                         DBH: 11.2 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>
+        
+      <!-- Adding an image with an event that displays text -->         
+      <a-image src="#2" position=".6 3.6 -5" rotation="0 0 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText2; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText2; visible: false">
+        <a-text id="cylinderText2" value="Ponderosa Pine
+                                         Distance to tree: 14.0 ft
+                                         Height: 20 ft
+                                         DBH: 29.1 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>    
+        
+      <!-- Adding an image with an event that displays text -->    
+      <a-image src="#3" position="2 1.6 -5" rotation="0 0 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText3; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText3; visible: false">
+        <a-text id="cylinderText3" value="Ponderosa Pine
+                                         Distance to tree: 27.3 ft
+                                         Height: 28 ft
+                                         DBH: 14.7 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>    
+
+      <!-- Adding an image with an event that displays text -->         
+      <a-image src="#4" position="3.2 3.7 3.2" rotation="0 205 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText4; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText4; visible: false">
+        <a-text id="cylinderText4" value="Ponderosa Pine
+                                         Distance to tree: 44.3 ft
+                                         Height: 45 ft
+                                         DBH: 16.3 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>          
+  
+      <!-- Adding an image with an event that displays text -->         
+      <a-image src="#5" position=".9 4.3 3.2" rotation="0 205 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText5; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText5; visible: false">
+        <a-text id="cylinderText5" value="Ponderosa Pine
+                                         Distance to tree: 23.4 ft
+                                         Height: 31 ft
+                                         DBH: 13.9 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image> 
+        
+      <!-- Adding an image icon of a home symbol -->         
+      <a-image id="home2" src="#arr1" position="-7 0 0" rotation="0 90 0" scale="1 1 1"></a-image>
+        
+      <!-- adding cursor to the middle of camera view  -->        
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    
+
+    </a-scene>
+  </body>
+</html>
+
+        
+<script>
+  
+    /* adding a clicking event to the home icon to send user to different webpage  */  
+    document
+    .querySelector("#home2")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/index.html";
+    }); 
+  
+</script> 

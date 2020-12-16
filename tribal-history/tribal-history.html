@@ -1,0 +1,59 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>    
+
+  </head>
+  
+  <body>
+  <a-scene>
+    <!-- Using the asset management system. -->     
+    <assets>
+      <img id="tribe" src="/worlds/crest.jpg">
+      <img id="home" src="/icons/home.png">
+      <img id="i" src="/icons/i.png">      
+      <img id="cheif" src="/images/kamiakin.jpg">      
+    </assets>
+ 
+    <!-- Adding 360 image to the sky -->     
+    <a-sky src="#tribe" rotation="0 -90 0"></a-sky>
+  
+    <!-- adding cursor to the middle of camera view  -->      
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+    
+      <!-- adding image of home icon  -->  
+    <a-image id="homePage" src="#home" position="-4 0 -3" rotation="0 45 0" scale="1 1 1"></a-image>
+    
+      <!-- adding image of Cheif Kamiakin icon  -->       
+    <a-image src="#cheif" position="0 3 -3" scale="2 2 2"></a-image>    
+  
+      <!-- Adding an image with an event that displays text -->     
+    <a-image src="#i" position="0 0 -4"
+             event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+             event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
+      <a-text id="cylinderText" value="Chief Kamiakin was a leader of the the Yakama, Palouse, and Klickitat peoples east of the Cascade Mountains in what is now Southeastern Washington state. In 1855, he was disturbed by threats of the Territorial Governor, Isaac Stevens, against the tribes of the Columbia Plateua. After being forced to sign a treaty of land cessions, Kamiakin organized alliances with 14 other tribes and leaders, and led the Yakima War of 1855-1858." align="center" color="#FFF" visible="false" position="0 -1.679 0.55"
+              geometry="primitive: plane; height: auto; width: auto" material="color: #000000"></a-text>
+    </a-image>
+
+      
+      
+  </a-scene>
+</body>
+  
+</html>
+
+<script>
+        /* adding a clicking event to the home icon to send user to different webpage  */    
+        document
+    .querySelector("#homePage")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/index.html";
+    });      
+</script>

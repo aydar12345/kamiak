@@ -1,0 +1,295 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>       
+
+  </head>
+  <body>
+    <a-scene>
+      <!-- Assest storage -->  
+      <a-assets>
+        <img id="north-aug" src="/worlds/north-aug.jpg">
+        <img id="1" src="/icons/1.png">
+        <img id="2" src="/icons/2.png">
+        <img id="3" src="/icons/3.png">
+        <img id="4" src="/icons/4.png">         
+        <img id="5" src="/icons/5.png"> 
+        <img id="6" src="/icons/6.png">
+        <img id="7" src="/icons/7.png"> 
+        <img id="8" src="/icons/8.png">
+        <img id="9" src="/icons/9.png">
+        <img id="10" src="/icons/10.png">
+        <img id="11" src="/icons/11.png">
+        <img id="12" src="/icons/12.png">         
+        <img id="13" src="/icons/13.png"> 
+        <img id="14" src="/icons/14.png"> 
+        <img id="15" src="/icons/15.png">
+        <img id="16" src="/icons/16.png">
+        <img id="17" src="/icons/17.png">
+        <img id="arr1" src="/icons/arrow.png">        
+      </a-assets>
+      
+      <!-- Adding 360 image to the sky -->      
+      <a-sky src="#north-aug" rotation="0 -90 0"></a-sky>
+ 
+      <!-- Adding an image with an event that displays text -->      
+      <a-image src="#1" position="-.7 .6 -5" rotation="0 0 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
+        <a-text id="cylinderText" value="Douglas-fir
+                                         Distance to tree: 28.0 ft
+                                         Height: 90 ft
+                                         DBH: 11.2 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>
+                
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#2" position="1.7 3.7 -5" rotation="0 0 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText2; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText2; visible: false">
+        <a-text id="cylinderText2" value="Douglas-fir
+                                         Distance to tree: 37.5 ft
+                                         Height: 102 ft
+                                         DBH: 24 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>           
+
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#3" position="2.3 .5 -5" rotation="0 0 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText3; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText3; visible: false">
+        <a-text id="cylinderText3" value="Douglas-fir
+                                         Distance to tree: 10.3 ft
+                                         Height: 105 ft
+                                         DBH: 22.8 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>           
+
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#4" position="3.5 5 -5" rotation="0 -22 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText4; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText4; visible: false">
+        <a-text id="cylinderText4" value="Douglas-fir
+                                         Distance to tree: 9.1 ft
+                                         Height: 92 ft
+                                         DBH: 13.1 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>         
+
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#5" position="4.5 1 -5" rotation="0 -22 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText5; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText5; visible: false">
+        <a-text id="cylinderText5" value="Douglas-fir
+                                         Distance to tree: 35.5 ft
+                                         Height: 91 ft
+                                         DBH: 14.0 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>                 
+      
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#6" position="5.5 3.4 .9" rotation="0 -90 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText6; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText6; visible: false">
+        <a-text id="cylinderText6" value="Douglas-fir
+                                         Distance to tree: 36.6 ft
+                                         Height: 115 ft
+                                         DBH: 26.1 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>            
+   
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#7" position="5.8 4.5 3.5" rotation="0 -130 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText7; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText7; visible: false">
+        <a-text id="cylinderText7" value="Douglas-fir
+                                         Distance to tree: 32.2 ft
+                                         Height: 110 ft
+                                         DBH: 22.5 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>               
+ 
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#8" position="3.2 4.5 3.5" rotation="0 -130 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText8; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText8; visible: false">
+        <a-text id="cylinderText8" value="Douglas-fir
+                                         Distance to tree: 26.2 ft
+                                         Height: 98 ft
+                                         DBH: 15.8 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>            
+        
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#9" position=".4 2.4 3.5" rotation="0 -175 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText9; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText9; visible: false">
+        <a-text id="cylinderText9" value="Douglas-fir
+                                         Distance to tree: 15.6 ft
+                                         Height: 95 ft
+                                         DBH: 23.3 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+       </a-image>              
+
+      <!-- Adding an image with an event that displays text -->        
+       <a-image src="#10" position="-.2 5 3.5" rotation="0 -175 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText10; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText10; visible: false">
+        <a-text id="cylinderText10" value="Douglas-fir
+                                         Distance to tree: 30.3 ft
+                                         Height: 80 ft
+                                         DBH: 10.4 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>              
+ 
+      <!-- Adding an image with an event that displays text -->         
+      <a-image src="#11" position="-2.6 2.4 3.5" rotation="0 -200 0"
+             event-set__enter="_event: mouseenter; _target: #cylinderText11; visible: true"
+             event-set__leave="_event: mouseleave; _target: #cylinderText11; visible: false">
+        <a-text id="cylinderText11" value="Douglas-fir
+                                         Distance to tree: 21.4 ft
+                                         Height: 95 ft
+                                         DBH: 21.4 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>           
+
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#12" position="-3.3 4.4 2.1" rotation="0 -242 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText12; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText12; visible: false">
+        <a-text id="cylinderText12" value="Douglas-fir
+                                         Distance to tree: 32.6 ft
+                                         Height: 87 ft
+                                         DBH: 11.1 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>   
+        
+      <!-- Adding an image with an event that displays text -->          
+      <a-image src="#13" position="-4 2.4 .6" rotation="0 -260 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText13; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText13; visible: false">
+        <a-text id="cylinderText13" value="Douglas-fir
+                                         Distance to tree: 18.7 ft
+                                         Height: 112 ft
+                                         DBH: 15.6 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>
+        
+        
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#14" position="-4 1.4 -2" rotation="0 -300 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText14; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText14; visible: false">
+        <a-text id="cylinderText14" value="Ponderosa Pine
+                                         Distance to tree: 27.0 ft
+                                         Height: 110 ft
+                                         DBH: 16.3 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>        
+        
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#15" position="-4 4.4 -2.7" rotation="0 -300 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText15; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText15; visible: false">
+        <a-text id="cylinderText15" value="Douglas-fir
+                                         Distance to tree: 38.6 ft
+                                         Height: 95 ft
+                                         DBH: 16.3 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>          
+  
+        
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#16" position="-2.7 3.4 -3.8" rotation="0 -330 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText16; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText16; visible: false">
+        <a-text id="cylinderText16" value="Douglas-fir
+                                         Distance to tree: 11.0 ft
+                                         Height: 115 ft
+                                         DBH: 24.3 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>          
+
+      <!-- Adding an image with an event that displays text -->        
+      <a-image src="#17" position="-2.7 1.4 -4.2" rotation="0 -330 0"
+               event-set__enter="_event: mouseenter; _target: #cylinderText17; visible: true"
+               event-set__leave="_event: mouseleave; _target: #cylinderText17; visible: false">
+        <a-text id="cylinderText17" value="Western Larch
+                                         Distance to tree: 37.0 ft
+                                         Height: 97 ft
+                                         DBH: 14.4 inch’’"
+                align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                align="center" color="#FFF" visible="false" rotation="0 0 0" position="0 -0.55 0.55"
+                geometry="primitive: plane; width: 3; height: 2;" material="color: #000;">
+      </a-image>           
+        
+      <!-- Adding an arrow image -->  
+      <a-image id="south1" src="#arr1" position="-5 0 1" rotation="0 90 0" scale="1 1 1"></a-image>
+        
+      <!-- adding cursor to the middle of camera view  -->        
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    
+
+    </a-scene>
+  </body>
+</html>
+
+ 
+
+<script>
+    /* adding a clicking event to the arrow icon to send user to different webpage  */  
+    document
+    .querySelector("#south1")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/trees/south-carbon.html";
+    });
+</script>  
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>   
+
+  </head>
+  <body>
+    <a-scene>
+      <!-- Using the asset management system. -->        
+      <assets>
+        <img id="south-aug" src="/worlds/south-aug.jpg">
+        <img id="1" src="/icons/camera.png">
+        <img id="elk" src="/wildlife/elk.jpeg">
+        <img id="mule" src="/wildlife/mule-deer.jpg">
+        <img id="turkey" src="/wildlife/turkey.jpg">
+        <img id="whiteTail" src="/wildlife/white-tail-deer.jpg">
+        <img id="home" src="/icons/home.png">
+      </assets>
+      
+      <!-- adding cursor to the middle of camera view  -->   
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+      
+      <!-- Adding 360 image to the sky -->          
+      <a-sky src="#south-aug" rotation="0 -90 0"></a-sky>
+               
+       <!-- Adding an image with an event that displays hiddden image -->      
+      <a-image src="#1" position="0.017 2.825 5.063"
+                event-set__enter="_event: mouseenter; _target: #imageOne; visible: true"
+                event-set__leave="_event: mouseleave; _target: #imageOne; visible: false">
+        <a-image id="imageOne" src="#elk" width="1.440" height=".810" visible="false" position="-0.050 -0.299 -0.343" scale="3 3 3"></a-image>
+      </a-image>   
+ 
+      <!-- Adding an image with an event that displays hiddden image -->      
+      <a-image src="#1" position="4.954 1.9 -0.293" rotation="0 277 0"
+                event-set__enter="_event: mouseenter; _target: #imageTwo; visible: true"
+                event-set__leave="_event: mouseleave; _target: #imageTwo; visible: false">
+        <a-image id="imageTwo" src="#mule" width="1.440" height=".810" visible="false" position="0 -0.55 0.55" scale="3 3 3"></a-image>
+      </a-image>        
+
+       <!-- Adding an image with an event that displays hiddden image -->      
+      <a-image src="#1" position="-5.285 2.280 1.133" rotation="0 101 0"
+                event-set__enter="_event: mouseenter; _target: #imageThree; visible: true"
+                event-set__leave="_event: mouseleave; _target: #imageThree; visible: false">
+        <a-image id="imageThree" src="#turkey" width="1.440" height=".810" visible="false" position="0 -0.55 0.55" scale="3 3 3"></a-image>
+      </a-image>         
+      
+       <!-- Adding an image with an event that displays hiddden image -->      
+      <a-image src="#1" position="1 .705 -4.797" rotation="0 -7 0"
+                event-set__enter="_event: mouseenter; _target: #imageFour; visible: true"
+                event-set__leave="_event: mouseleave; _target: #imageFour; visible: false">
+        <a-image id="imageFour" src="#whiteTail" width="1.440" height=".810" visible="false" position="0 -0.55 0.55" scale="3 3 3"></a-image>
+      </a-image> 
+     
+       <!-- Adding an image of a home icon-->      
+      <a-image id="homePage" src="#home" position="-4.416 0.890 -3.532" rotation="0 50 0" scale="1 1 1"></a-image> 
+      
+    </a-scene>
+  </body>
+</html>
+
+<script>
+    /* adding a clicking event to the home icon to send user to different webpage  */  
+    document
+    .querySelector("#homePage")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/index.html";
+    });      
+  
+</script>

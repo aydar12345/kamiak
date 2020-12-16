@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>   
+
+  </head>
+  <body>
+    <a-scene>
+      <!-- Using the asset management system. -->     
+      <assets>
+        <img id="north-aug" src="/worlds/north-aug.jpg">
+        <img id="coyote" src="/wildlife/coyote.jpg">
+        <img id="hawk" src="/wildlife/cooper-hawk.jpg">
+        <img id="1" src="/icons/camera.png">
+        <img id="moose" src="/wildlife/moose-north.png">
+        <img id="arr1" src="/icons/arrow.png">         
+      </assets>
+
+      <!-- adding cursor to the middle of camera view  -->       
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+
+      <!-- Adding 360 image to the sky -->          
+      <a-sky src="#north-aug" rotation="0 -90 0"></a-sky>
+               
+       <!-- Adding an image with an event that displays hiddden image -->         
+      <a-image src="#1" position="-6.415 1.843 2.550" rotation="0 110 0"
+                event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+                event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
+        <a-image id="cylinderText" src="#coyote" width="1.440" height=".810" visible="false" position="0 -0.55 0.55" scale="3 3 3"></a-image>
+      </a-image>   
+      
+       <!-- Adding an image with an event that displays hiddden image -->  
+      <a-image src="#1" position="2.985 2.542 2.629" rotation="0 230 0"
+                event-set__enter="_event: mouseenter; _target: #Text; visible: true"
+                event-set__leave="_event: mouseleave; _target: #Text; visible: false">
+        <a-image id="Text" src="#hawk" width="1.440" height=".810" visible="false" position="0 -0.55 0.55" scale="2 2 2"></a-image>
+      </a-image>
+      
+       <!-- Adding an image with an event that displays hiddden image -->  
+      <a-image src="#1" position="1.0 .705 -4.797" rotation="0 -5 0"
+                event-set__enter="_event: mouseenter; _target: #moosePic; visible: true"
+                event-set__leave="_event: mouseleave; _target: #moosePic; visible: false">
+        <a-image id="moosePic" src="#moose" width="1.440" height=".810" visible="false" position="0 -0.55 0.55" scale="3 3 3"></a-image>
+      </a-image>         
+       <!-- Adding an image of a arrow icon -->        
+      <a-image id="south2" src="#arr1" position="-4.416 0.890 -3.532" rotation="0 50 0" scale="1 1 1">
+
+      
+    </a-scene>
+  </body>
+</html>
+  
+<script>
+      /* adding a clicking event to the arrow icon to send user to different webpage  */  
+      document
+    .querySelector("#south2")
+    .addEventListener("click", e => {
+      location.href = "https://ecolearn360.com/eco360/Wildlife/south-wildlife.html";
+    });      
+  
+</script>

@@ -33,44 +33,46 @@ It should feature HTML entity
       <video id="gas" src="/videos/gas.mp4" loop="true"></video>
       <img id="hawk" src="/wildlife/cooper-hawk.jpg">
     </a-assets>
-
+    
+    
+    <!-- adding cursor to the middle of camera view  -->
     <a-camera>
       <a-cursor>
       </a-cursor>
     </a-camera>
     
-
+    <!-- Adding 360 image to the sky -->
     <a-sky src="#start" rotation="0 -90 0"></a-sky> 
-    
-    <a-text id="forth" value="Trees" align="center" color="#FFF" rotation="0 0 0" position="-1.1 1.6 -2" scale=".5 .5 .5"
+
+    <!-- Adding text and a plane -->    
+    <a-text id="forth" value="Trees" align="center" color="#FFF" rotation="0 0 0" position="-.5 1.6 -2" scale=".5 .5 .5"
             geometry="primitive: plane; width: 2; height: .6;" material="color: #000; transparent: true; opacity: .6"
     ></a-text>
     
-    
-    <a-text id="second" value="Seasonal Change" align="center" color="#FFF" rotation="0 0 0" position="0 1.6 -2" scale=".5 .5 .5"
+    <!-- Adding text and a plane -->     
+    <a-text id="second" value="Seasonal Change" align="center" color="#FFF" rotation="0 0 0" position=".6 1.6 -2" scale=".5 .5 .5"
             geometry="primitive: plane; width: 2; height: .6;" material="color: #000; transparent: true; opacity: .6"
     ></a-text>
     
-    <a-text id="third" value="Geology" align="center" color="#FFF" rotation="0 0 0" position="1.1 1.6 -2" scale=".5 .5 .5"
-            geometry="primitive: plane; width: 2; height: .6;" material="color: #000; transparent: true; opacity: .6"
-    ></a-text>
-    
-    
-    <a-text id="fifth" value="Wildlife" align="center" color="#FFF" rotation="0 0 0" position="-1.1 1.2 -2" scale=".5 .5 .5"
+    <!-- Adding text and a plane -->     
+    <a-text id="third" value="Wildlife" align="center" color="#FFF" rotation="0 0 0" position="-.5 1.2 -2" scale=".5 .5 .5"
             geometry="primitive: plane; width: 2; height: .6;" material="color: #000; transparent: true; opacity: .6"
     ></a-text>    
 
-    <a-text id="sixth" value="Culture" align="center" color="#FFF" rotation="0 0 0" position="0 1.2 -2" scale=".5 .5 .5"
+    <!-- Adding text and a plane -->     
+    <a-text id="sixth" value="Culture" align="center" color="#FFF" rotation="0 0 0" position=".6 1.2 -2" scale=".5 .5 .5"
             geometry="primitive: plane; width: 2; height: .6;" material="color: #000; transparent: true; opacity: .6"
     ></a-text>
-    
-    <a-text id="third" value="Plants" align="center" color="#FFF" rotation="0 0 0" position="1.1 1.2 -2" scale=".5 .5 .5"
-            geometry="primitive: plane; width: 2; height: .6;" material="color: #000; transparent: true; opacity: .6"
-    ></a-text>    
+ 
+    <!-- Adding text -->     
+    <a-text value="Click and hover on elements with the cursor to interact with them" align="center" color="#FFF" rotation="0 0 0" position="-0 .5 -2" scale=".5 .5 .5"
+            geometry="primitive: plane; width: 6; height: .6;" material="color: #000; transparent: true; opacity: .6"
+    ></a-text>  
   
-    
-    <a-text id="third" value="Select a tour" align="center" color="white" rotation="0 0 0" position="0 1.95 -2" scale=".7 .7 .7"></a-text>    
-    
+    <!-- Adding text -->     
+    <a-text value="Select a tour" align="center" color="white" rotation="0 0 0" position="0 1.95 -2" scale=".7 .7 .7"></a-text>    
+
+    <!-- Adding image with an event that display hidden text -->     
     <a-image image src="/icons/location-1.png" position="5 0 0" rotation="0 270 0"
                 event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
                 event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
@@ -90,24 +92,28 @@ It should feature HTML entity
 
 
 <script>
+  /* adding a clicking event to the seasonal change text to send user to different webpage  */  
   document
     .querySelector("#second")
     .addEventListener("click", e => {
       location.href = "szns/north-aug.html";
     });
   
+  /* adding a clicking event to the wildlife text to send user to different webpage  */  
     document
     .querySelector("#third")
     .addEventListener("click", e => {
-      location.href = "geology/geology.html";
+      location.href = "https://ecolearn360.com/eco360/Wildlife/north-wildlife.html";
     });
-  
+ 
+  /* adding a clicking event to the trees text to send user to different webpage  */  
     document
     .querySelector("#forth")
     .addEventListener("click", e => {
       location.href = "trees/north-carbon.html";
     });  
- 
+
+  /* adding a clicking event to the tribal text to send user to different webpage  */  
       document
     .querySelector("#sixth")
     .addEventListener("click", e => {
